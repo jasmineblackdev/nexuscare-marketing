@@ -1,56 +1,66 @@
-const steps = [
-  {
-    step: '01',
-    title: 'Speed — Respond Before the Competition',
-    desc:  'Response time SLA tracking and instant mobile alerts mean your team gets to the referral first. Every minute counts when discharge planners have multiple facilities to call.',
-  },
-  {
-    step: '02',
-    title: 'Relationships — Own Your Referral Network',
-    desc:  'Built-in Hospital CRM tracks every discharge planner, social worker, and liaison relationship. Know who sends your best referrals and invest accordingly.',
-  },
-  {
-    step: '03',
-    title: 'Positioning — Win on Clinical Fit',
-    desc:  'AI-assisted routing matches referrals to the right building based on clinical needs, bed availability, and payor profile — so you accept more and regret less.',
-  },
-  {
-    step: '04',
-    title: 'Revenue — Optimize Every Admission',
-    desc:  'Payor mix intelligence and empty bed tracking show you the revenue impact of every decision. Stop accepting the wrong census mix and maximize reimbursement.',
-  },
-]
-
 export default function WhatWeDo() {
   return (
-    <section id="what-we-do" className="py-24 px-6 bg-white">
+    <section className="py-20 px-6 bg-navy">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-3">
-            The Complete Sales Funnel
-          </p>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Other tools speed up data entry.<br />
-            NexusCare helps you win.
-          </h2>
-          <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            Unlike Aline or PointClickCare, NexusCare addresses every stage of the
-            referral funnel — not just intake.
-          </p>
-        </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-xs font-semibold text-teal uppercase tracking-widest mb-4">The Problem</p>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">
+              Senior care teams lose referrals not because they don't care — but because the tools haven't kept up.
+            </h2>
+            <p className="text-gray-300 leading-relaxed mb-6">
+              Spreadsheets, phone tags, and disconnected EHR workflows mean your team is always reactive.
+              Discharge planners move on. Liaisons can't see what's needed. Admissions directors don't know
+              where a referral stands until it's already gone.
+            </p>
+            <p className="text-gray-300 leading-relaxed">
+              NexusCare changes that. It's the only platform purpose-built to address the full referral
+              journey — from the moment a hospital reaches out to the day a resident moves in.
+            </p>
+          </div>
 
-        <div className="grid sm:grid-cols-2 gap-8">
-          {steps.map(s => (
-            <div key={s.step} className="flex gap-5">
-              <div className="shrink-0 w-12 h-12 rounded-xl bg-blue-600 text-white font-bold text-sm flex items-center justify-center">
-                {s.step}
+          <div className="space-y-4">
+            {[
+              {
+                label: 'Before NexusCare',
+                items: [
+                  'Referrals arrive by fax, phone, and email with no central tracking',
+                  'Liaisons log visits manually — if they log them at all',
+                  'Admissions decisions made without payor mix context',
+                  'No visibility into why referrals are lost',
+                  'Leadership sees lagging reports, not live data',
+                ],
+                color: 'border-red-400/30 bg-red-950/20',
+                icon: '✕',
+                iconColor: 'text-red-400',
+              },
+              {
+                label: 'With NexusCare',
+                items: [
+                  'Every referral tracked from first contact to admission',
+                  'Liaisons update status from mobile, in real time',
+                  'AI-assisted routing aligned to clinical fit and payor mix',
+                  'Win/loss analytics surface patterns you can act on',
+                  'Live dashboards for operators, directors, and staff',
+                ],
+                color: 'border-teal/30 bg-teal/5',
+                icon: '✓',
+                iconColor: 'text-teal',
+              },
+            ].map(card => (
+              <div key={card.label} className={`rounded-2xl border ${card.color} p-5`}>
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">{card.label}</p>
+                <ul className="space-y-2">
+                  {card.items.map(item => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-gray-300">
+                      <span className={`shrink-0 font-bold ${card.iconColor}`}>{card.icon}</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div>
-                <h3 className="font-bold text-gray-900 mb-1">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

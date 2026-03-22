@@ -5,16 +5,23 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans:    ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Sora', 'system-ui', 'sans-serif'],
       },
       colors: {
-        brand: {
-          50:  '#eff6ff',
-          100: '#dbeafe',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
+        navy: {
+          DEFAULT: '#0E2443',
+          light:   '#1F3451',
+          lighter: '#2A4A6B',
         },
+        teal: {
+          DEFAULT: '#0C9789',
+          light:   '#C8EEE9',
+          dark:    '#097A6E',
+        },
+        warm:  '#FAF8F4',
+        slate: '#617289',
+        amber: '#F5920A',
       },
     },
   },
