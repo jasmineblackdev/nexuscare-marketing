@@ -10,7 +10,7 @@ export default function Nav() {
 
         {/* Logo */}
         <a href="/" className="shrink-0">
-          <img src="/logo.png" alt="NexusCare" className="h-9 w-auto" />
+          <img src="/logo.png" alt="NexusCare" className="h-14 w-auto" />
         </a>
 
         {/* Desktop nav */}
