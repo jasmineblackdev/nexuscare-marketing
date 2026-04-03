@@ -1,4 +1,4 @@
-import { APP_URL, CONTACT_EMAIL } from '@/lib/constants'
+import { APP_URL, CONTACT_EMAIL, LIAISON_URL } from '@/lib/constants'
 
 export default function Footer() {
   return (
