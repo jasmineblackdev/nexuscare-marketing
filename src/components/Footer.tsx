@@ -33,6 +33,7 @@ export default function Footer() {
               <li><a href={`${APP_URL}/signup`}    className="hover:text-white transition-colors">Create Account</a></li>
               <li><a href={`${APP_URL}/login`}     className="hover:text-white transition-colors">Client Login</a></li>
               <li><a href={`${APP_URL}/pilot`}     className="hover:text-white transition-colors">Pilot Program</a></li>
+              <li><a href={LIAISON_URL}            className="hover:text-white transition-colors">Field Team Login</a></li>
             </ul>
           </div>
 
